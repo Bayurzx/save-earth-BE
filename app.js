@@ -19,7 +19,6 @@ const userRoutes = require('./routes/user');
 const braintreeRoutes = require('./routes/braintree');
 
 
-
 // DB
 mongoose.connect(db, {
   useNewUrlParser : true,
