@@ -15,7 +15,7 @@ exports.signupValidator = (req, res, next) => {
   req.check('password', 'password is required').notEmpty();
   req.check('password')
       .matches(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$/)
-      .withMessage('Password must be atleast 6 characters, contain a number and a symbol');
+      .withMessage('Password must be atleast 8 characters, contain a number and a symbol. \n eg. P@$$word123');
 
   const errors = req.validationErrors();
   if (errors) {
